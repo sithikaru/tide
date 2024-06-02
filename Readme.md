@@ -6,8 +6,8 @@ Welcome to the Tide website development project! This project is a group coursew
 
 ## 👥 Team Members and Roles
 
-- **Student 1**: Splash Screen, Shop
-- **Student 2**: Home Page, Navigation Bar, Feedback
+- **Student 1 (Sithija Karunasena)**: Splash Screen, Shop
+- **Student 2 (Thisara Neelawala)**: Home Page, Navigation Bar, Feedback
 - **Student 3**: User Profile, Team
 - **Student 4**: Gallery, Sitemap
 

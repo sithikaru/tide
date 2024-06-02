@@ -1,126 +1,23 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
-        }
-        .container {
-            max-width: 600px;
-            margin: 100px auto;
-            text-align: center;
-            position: relative; /* Position relative for absolute positioning of bubbles */
-        }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-        .countdown {
-            font-size: 24px;
-            margin-bottom: 40px;
-        }
-        .footer {
-            font-size: 14px;
-            margin-top: 40px;
-        }
-        .bubble {
-            position: absolute;
-            background-color: rgba(255, 255, 255, 0.6);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            animation: floatBubble 5s ease-in-out infinite;
-        }
-        @keyframes floatBubble {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-50px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <title>tide</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Coming Soon</h1>
-        <p>Our website is under construction.</p>
-        <div class="countdown">
-            <p id="demo"></p>
-        </div>
-        <div class="footer">
-            &copy; 2024 Tide Website Development. All rights reserved.
-        </div>
-    </div>
-
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("July 15, 2024 13:00:00").getTime();
-
-        // Update the countdown every 1 second
-        var x = setInterval(function() {
-            // Get the current date and time
-            var now = new Date().getTime();
-
-            // Calculate the remaining time
-            var distance = countDownDate - now;
-
-            // Calculate days, hours, minutes, and seconds
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the countdown
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-            // If the countdown is over, display a message
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-
-        // Function to create bubbles
-        function createBubble() {
-            // Create a new bubble element
-            var bubble = document.createElement("div");
-            bubble.classList.add("bubble");
-
-            // Randomize bubble position
-            var randomX = Math.random() * window.innerWidth;
-            var randomY = Math.random() * window.innerHeight;
-
-            // Set bubble position
-            bubble.style.left = randomX + "px";
-            bubble.style.top = randomY + "px";
-
-            // Append bubble to container
-            document.querySelector(".container").appendChild(bubble);
-
-            // Remove bubble after animation ends
-            bubble.addEventListener("animationend", function() {
-                bubble.remove();
-            });
-        }
-
-        // Generate bubbles every 2 seconds
-        setInterval(createBubble, 2000);
-    </script>
+    <div class="overlay"></div>
+<div class="stars" aria-hidden="true"></div>
+<div class="starts2" aria-hidden="true"></div>
+<div class="stars3" aria-hidden="true"></div>
+<main class="main">
+	<section class="contact">
+		<h1 class="title">Awesome Thing</h1>
+		<h2 class="sub-title">Site Under Construction</h2>
+	</section>
+</main>
 </body>
 </html>

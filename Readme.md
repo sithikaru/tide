@@ -1,5 +1,5 @@
 # 🌊 Tide Website Development
-[text](https://sithikaru.github.io/tide/)
+[Go to site 🔗 ](https://sithikaru.github.io/tide/)
 
 ## 📋 Project Overview
 

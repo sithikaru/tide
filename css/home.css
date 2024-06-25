@@ -1,14 +1,36 @@
 @keyframes appear {
-    from{
+    from {
         opacity: 0;
         scale: 0.5;
-    }to{
+    }
+
+    to {
         opacity: 1;
         scale: 1;
     }
 }
 
-.block{
+@keyframes marquee {
+    0% {
+      background-position: 0;
+    }
+  
+    100% {
+      background-position: -1190px;
+    }
+  }
+
+  @keyframes marqueeR {
+    0% {
+      background-position: -1190px;
+    }
+  
+    100% {
+      background-position: 0;
+    }
+  }
+
+.block {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 40%;
@@ -184,18 +206,18 @@ nav {
     min-width: 310px ;
 } */
 
-.cardTitle{
+.cardTitle {
     font-size: 25px;
     font-weight: bold;
 }
 
-.cardContent{
+.cardContent {
     font-size: 20px;
     font-weight: 400;
     width: 80%;
 }
 
-.missionCards{
+.missionCards {
     height: 50vh;
     width: 100%;
     justify-content: center;
@@ -203,14 +225,15 @@ nav {
     align-content: center;
     margin-bottom: 150px;
 }
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
     gap: 20px;
     padding: 0px 20%;
-  }
-  
-  .card {
+}
+
+.card {
     background-color: rgb(255, 255, 255);
     padding: 20px;
     text-align: center;
@@ -219,58 +242,114 @@ nav {
     align-items: center;
     border-radius: 10px;
     transition-duration: 300ms;
-  }
+}
 
-  .four:hover{
+.four:hover {
     box-shadow: 5px 5px 10px #4a51a359;
-  }
+}
 
-  .one:hover{
+.one:hover {
     box-shadow: -5px -5px 10px #4a51a359;
-  }
+}
 
-  .three:hover{
+.three:hover {
     box-shadow: -5px 5px 10px #4a51a359;
-  }
+}
 
-  .two:hover{
+.two:hover {
     box-shadow: 5px -5px 10px #4a51a359;
-  }
+}
 
-  .gallery{
-    height: 100vh;
+.gallery {
+    height: 80vh;
     justify-content: center;
     align-items: center;
     align-content: center;
-  }
+}
 
-  .gallery h1{
+.gallery h1 {
     font-size: 48px;
-    color:#4A51A3;
-  }
+    color: #4A51A3;
+}
 
-  .img-container {
+.img-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-  }
-  
-  .img{
+}
+
+.img {
     background-size: cover;
     background-position: center;
     height: 350px;
     width: 250px;
     border-radius: 10px;
-  }
-  .img1{
+    -webkit-filter: brightness(100%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.img:hover {
+    -webkit-filter: brightness(50%);
+    transform: scale(1.1);
+}
+
+.img1 {
     background-image: url('../images/ocg-saving-the-ocean-psRG_u3DLps-unsplash.jpg');
-  }
-  .img2{
+}
+
+.img2 {
     background-image: url('../images/ocg-saving-the-ocean-cyxRGU7keTw-unsplash.jpg');
-  }
-  .img3{
+}
+
+.img3 {
     background-image: url('../images/ocg-saving-the-ocean-bWAArZ5M4Ag-unsplash.jpg');
-  }
-  .img4{
+}
+
+.img4 {
     background-image: url('../images/mateusz-klein-aAKvscHLQuA-unsplash.jpg');
-  }
+}
+
+.seeMore {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+.seeMore h3 {
+    font-size: 32px;
+    color: #4A51A3;
+}
+
+.seeMore img {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+}
+
+.seeMore:hover+.seeMoreImg {
+    margin-top: 0px;
+    transform: scale(1.1);
+}
+
+.seeMore:hover {
+    transform: scale(1.1) translateX(-20px);
+}
+
+.fishLine{
+    background-image: url("../images/fishLine.svg");
+    min-height: 100px;
+    background-repeat: repeat-x;
+    animation: marquee 10s infinite linear;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+}
+
+.fishLine:hover{
+    animation-duration: 2s;
+}

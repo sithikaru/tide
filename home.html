@@ -97,9 +97,71 @@
             </div>
         </div>
     </div>
-        <div class="fishLine"></div>
-        <div class="container"></div>
-        
+    <div class="fishLine"></div>
+    <div class="container">
+        <div class="shop">
+            <div class="center">
+                <div class="stack-area">
+                    <div class="right">
+                        <div class="tickets">
+                            <div class="ticket">
+                                <img src="images/Diaomnd 1.svg" alt="">
+                            </div>
+                            <div class="ticket">
+                                <img src="images/GOLD 1.svg" alt="">
+                            </div>
+                            <div class="ticket">
+                                <img src="images/SILVER 1.svg" alt="">
+                                <div class="seeMore">
+                                    <h3>See more</h3>
+                                    <img src="images/clarity_arrow-line.png" alt="" class="seeMoreImg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script>
+        let tickets = document.querySelectorAll(".ticket");
+        let stackArea = document.querySelector(".stack-area");
+
+        function rotateTickets() {
+            let angle = 0;
+            tickets.forEach((ticket, index) => {
+                if (ticket.classList.contains("active")) {
+                    ticket.style.transform = `translate(-50%, -128vh) rotate(-48deg)`;
+                } else {
+                    ticket.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+                    angle -= 10;
+                }
+            });
+        }
+
+        rotateTickets();
+
+        window.addEventListener("scroll", () => {
+            let proportion = stackArea.getBoundingClientRect().top / window.innerHeight;
+            if (proportion <= 0) {
+                let n = tickets.length;  // Changed 'cards' to 'tickets' to match your HTML
+                let index = Math.ceil((proportion * n) / 2);
+                index = Math.abs(index) - 1;
+                <!-- console.log(index); -->
+                for(let i=0;i<n;i++){
+                    if(i<=index){
+                        tickets[i].classList.add("active")
+                    }else{
+                        tickets[i].classList.remove("active")
+                    }
+                }
+                rotateTickets();
+            }
+        });
+    </script>
 </body>
 
 </html>

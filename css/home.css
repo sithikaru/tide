@@ -353,3 +353,64 @@ nav {
 .fishLine:hover{
     animation-duration: 2s;
 }
+
+.center{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.stack-area{
+    width: 100%;
+    height: 300vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.right{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    flex-basis: 50%;
+}
+
+.tickets{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.ticket{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6mm;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s ease-in-out;
+}
+
+.ticket:nth-child(1){
+    z-index: 3;
+}
+
+.ticket:nth-child(2){
+    z-index: 2;
+}
+.ticket:nth-child(3){
+    z-index: 1;
+}
+
+.ticket:active{
+    transform-origin: bottom left;
+}

@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
-    <title></title>
+    <title>tide</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <div class="navContent">
                 <ul>
                     <li><a href="">Gallery</a></li>
-                    <li><a href="">Shop</a></li>
+                    <li><a href="shop.html">Shop</a></li>
                     <li><a href="">Feedback</a></li>
                     <li><a href="">Sitemap</a></li>
                     <li><a href="">Team</a></li>
@@ -121,7 +121,42 @@
                     </div>
                 </div>
             </div>
-            
+
+        </div>
+        
+    </div>
+   
+    <div class="footer">
+        <div>
+            <img src="images/Asset 4@4x.png" alt="" class="footerImg">
+        </div>
+        <div class="footerNavigation">
+            <div>
+                <h3>NAVIGATION</h3>
+            </div>
+            <div>
+                <a href="">Gallery</a>
+                <a href="shop.html">Shop</a>
+                <a href="">Feedback</a>
+                <a href="">Sitemap</a>
+                <a href="">Team</a>
+                <a href="">Blog</a>
+            </div>
+        </div>
+        <div class="footerSocial">
+            <div>
+                <h3>SOCIAL</h3>
+            </div>
+            <div>
+                <a href="">
+                    <img src="images/fb.png" alt="">
+                    Facebook</a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="images/linkedin.png" alt="">
+                    LinkedIn</a>
+            </div>
         </div>
     </div>
 
@@ -151,10 +186,10 @@
                 let index = Math.ceil((proportion * n) / 2);
                 index = Math.abs(index) - 1;
                 <!-- console.log(index); -->
-                for(let i=0;i<n;i++){
-                    if(i<=index){
+                for (let i = 0; i < n; i++) {
+                    if (i <= index) {
                         tickets[i].classList.add("active")
-                    }else{
+                    } else {
                         tickets[i].classList.remove("active")
                     }
                 }

@@ -1,110 +1,3 @@
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-
-@keyframes marquee {
-    0% {
-      background-position: 0;
-    }
-  
-    100% {
-      background-position: -1190px;
-    }
-  }
-
-  @keyframes marqueeR {
-    0% {
-      background-position: -1190px;
-    }
-  
-    100% {
-      background-position: 0;
-    }
-  }
-
-.block {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-}
-
-.inter {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-        "slnt" 0;
-}
-
-.baloo {
-    font-family: "Baloo 2", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-
-body {
-    font-family: inter;
-    background-color: #EEEFFA;
-}
-
-nav {
-    /* height: 70px; */
-    color: #ffffff;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    max-height: fit-content;
-}
-
-.navLogo {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.navLogo img {
-    height: 30px;
-}
-
-.navContent ul {
-    display: flex;
-    gap: 70px;
-    list-style: none;
-    margin-left: 30%;
-    margin-top: 30px;
-}
-
-.navContent ul li a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.profileContainer {
-    display: flex;
-    align-items: end;
-    margin-top: 20px;
-}
-
-@media (max-width: 768px) {
-    .navContent ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
 .bgImage {
     width: 100%;
     max-height: max-content;
@@ -186,25 +79,6 @@ nav {
 .purpleText {
     color: #4A51A3;
 }
-
-/* .missionCards {
-    height: 100vh;
-    max-height: 100vh;
-    display: grid;
-    grid-template-columns: 200px 300px;
-    grid-row: 2 2;
-    grid-column-gap: 200px;
-    grid-row-gap: 20px;
-}
-
-.box{
-    background-color:#ffffff;
-    padding:20px;
-    border-radius:10px;
-    display:flex;
-    flex-direction: column;
-    min-width: 310px ;
-} */
 
 .cardTitle {
     font-size: 25px;
@@ -341,7 +215,7 @@ nav {
     transform: scale(1.1) translateX(-20px);
 }
 
-.fishLine{
+.fishLine {
     background-image: url("../images/fishLine.svg");
     min-height: 100px;
     background-repeat: repeat-x;
@@ -350,11 +224,11 @@ nav {
     transition-timing-function: ease-in-out;
 }
 
-.fishLine:hover{
+.fishLine:hover {
     animation-duration: 2s;
 }
 
-.center{
+.center {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -363,14 +237,15 @@ nav {
     flex-direction: column;
 }
 
-.stack-area{
+.stack-area {
     width: 100%;
     height: 300vh;
     position: relative;
     display: flex;
     justify-content: center;
 }
-.right{
+
+.right {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -381,13 +256,13 @@ nav {
     flex-basis: 50%;
 }
 
-.tickets{
+.tickets {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.ticket{
+.ticket {
     width: 100%;
     box-sizing: border-box;
     border-radius: 6mm;
@@ -400,17 +275,62 @@ nav {
     transition: 0.5s ease-in-out;
 }
 
-.ticket:nth-child(1){
+.ticket:nth-child(1) {
     z-index: 3;
 }
 
-.ticket:nth-child(2){
+.ticket:nth-child(2) {
     z-index: 2;
 }
-.ticket:nth-child(3){
+
+.ticket:nth-child(3) {
     z-index: 1;
 }
 
-.ticket:active{
+.ticket:active {
     transform-origin: bottom left;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    justify-content: space-around;
+    position: relative;
+}
+
+.footerImg {
+    width: 80px;
+}
+
+.footerNavigation div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerNavigation a {
+    text-decoration: none;
+    color: white;
+}
+
+.footerSocial div a{
+    text-decoration: none;
+    color: white;
+    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footerSocial div{
+    margin: 10px;
+}
+
+.footerLine{
+    background-color: white;
+    height: 10px;
+    width: 100%;
 }

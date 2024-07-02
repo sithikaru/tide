@@ -1,8 +1,109 @@
 /* Main styles common across all pages */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        background-position: 0;
+    }
+
+    100% {
+        background-position: -1190px;
+    }
+}
+
+@keyframes marqueeR {
+    0% {
+        background-position: -1190px;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+.block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+}
+
+.baloo {
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: inter;
+    background-color: #EEEFFA;
+}
+
+nav {
+    /* height: 70px; */
+    color: #ffffff;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    max-height: fit-content;
+}
+
+.navLogo {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.navLogo img {
+    height: 30px;
+}
+
+.navContent ul {
+    display: flex;
+    gap: 70px;
+    list-style: none;
+    margin-left: 30%;
+    margin-top: 30px;
+}
+
+.navContent ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.profileContainer {
+    display: flex;
+    align-items: end;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .navContent ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 .header {

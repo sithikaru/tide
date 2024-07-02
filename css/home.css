@@ -275,6 +275,10 @@
     transition: 0.5s ease-in-out;
 }
 
+.ticket img{
+    width: 350px;
+}
+
 .ticket:nth-child(1) {
     z-index: 3;
 }

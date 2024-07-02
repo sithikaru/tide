@@ -57,6 +57,8 @@
 body {
     font-family: inter;
     background-color: #EEEFFA;
+    margin: 0;
+    padding: 0;
 }
 
 nav {

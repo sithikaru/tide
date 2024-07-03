@@ -133,3 +133,56 @@ nav {
     bottom: 0;
     width: 100%;
 }
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    justify-content: space-around;
+    position: relative;
+}
+
+.footerImg {
+    width: 80px;
+}
+
+.footerNavigation div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerNavigation a {
+    text-decoration: none;
+    color: white;
+}
+
+.footerSocial div a{
+    text-decoration: none;
+    color: white;
+    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.footerSocial div{
+    margin: 10px;
+}
+
+.footerLine{
+    background-color: white;
+    height: 10px;
+    width: 100%;
+}
+
+.clickable{
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.clickable:hover{
+    transform: scale(1.1);
+}

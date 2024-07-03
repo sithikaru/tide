@@ -45,12 +45,18 @@ body {
 
 .topSearchContainer div img {
     margin-left: -50px;
-    z-index: 1;
+    z-index: 5;
 }
 
 .cartContainer {
     display: flex;
     align-items: center;
+}
+
+.shop{
+    height: 100vh;
+    padding-left: 130px;
+    padding-right: 130px;
 }
 
 .title{
@@ -61,11 +67,6 @@ body {
 .title h1{
  font-family:"Baloo 2", sans-serif;
 }
-
-.container{
-    padding-left: 130px;
-    padding-right: 130px;
-}
 .tabs{
     display: flex;
     flex-direction: row;
@@ -75,6 +76,10 @@ body {
 }
 
 .merchandise{
+    color:#7A7A7A;
+}
+
+.tokens{
     color:#7A7A7A;
 }
 
@@ -90,16 +95,21 @@ body {
  display: flex;
  flex-direction: row;
  width: 100%;
- justify-content: space-around;
+ justify-content: space-between;
  margin-top: 30px;
 }
 
-.item{
- 
+.item img:hover{
+    transform: scale(1.02);
 }
 
+.item img:hover ~ .cardDetails{
+    color: #4A51A3;
+  }
+
 .item img{
-    width: 215px;
+    width: 250px;
+    transition-duration: 0.3s;
 }
 
 .item div{
@@ -107,20 +117,20 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 10px;
     padding-top: 0px;
     margin-top: -20px;
 }
 
+.cardDetails{
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .cardName{
     font-weight: 600;
 }
 
 .addtoCartButtonContainer{
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .addtoCartButton img{
@@ -137,6 +147,204 @@ body {
     font-family: "Inter", sans-serif;
     display: flex;
     flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    justify-content: center;
     gap: 10px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.addtoCartButton:hover{
+    background-color: #4A51A3;
+}
+
+.tabs .active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+.tabs div {
+    cursor: pointer;
+}
+
+.merchImg{
+    min-width: 350px;
+}
+
+.sidePanel {
+    display: none;
+    position: fixed;  /* Changed from absolute to fixed */
+    right: 0;
+    top: 0;
+    background: white;
+    width: 400px;
+    height: 100vh;  /* Changed from 143% to 100vh */
+    padding: 30px;
+    box-shadow: 10px 10px 10px black;
+    z-index: 999;  /* Increased z-index to be above overlay */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidePanelTop div{
+    display: flex;
+    justify-content: space-between;
+    font-family:"Baloo 2", sans-serif;
+    justify-items: center;
+    font-weight: bold;
+}
+
+.searchIcon{
+    z-index: 2;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Changed to 0.5 for better visibility */
+    z-index: 998;
+}
+
+.cartItems{
+    display: flex;
+    flex-direction: column;
+}
+.cartItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.cartItem img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.itemDetails {
+    flex-grow: 1;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    font-family:"Baloo 2", sans-serif;
+}
+
+.quantityBtn {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.removeBtn {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-family:"Baloo 2", sans-serif;
+}
+
+.cartSummary {
+    margin-bottom: 50px;
+}
+
+.itemDetails{
+    display: flex;
+    flex-direction:column;
     justify-content: space-around;
+}
+
+.itemDetails h3{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.itemDetails p{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: #999999;
+}
+
+.cartItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.quantityBtn{
+    background: #D5D5D5;
+    border: 0;
+    border-radius: 5px;
+    padding: 4px;
+    width: 25px;
+}
+.quantitySpan{
+    background: #F6F6F6;
+    width: 70px;
+    text-align: center;
+    margin: 3px;
+    border-radius: 5px;
+}
+
+.cartItemRight{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.cartSummary{
+ border-top: 1px solid #D5D5D5;
+ font-family:"Baloo 2", sans-serif;
+}
+
+.subTotal{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.cartSummeryDesc{
+    color: #9E9E9E;
+}
+
+.checkoutButton{
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family:"Baloo 2", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.popup {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #4A51A3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 600;
 }

@@ -42,6 +42,8 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
+    color: #000;
 }
 
 .backButton img {
@@ -73,7 +75,7 @@ body {
     padding: 30px;
     padding-right: 50px;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .cardTitle {
@@ -124,7 +126,7 @@ input {
 .buttonGroup {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    
 }
 
 .clearButton, .saveButton {
@@ -144,40 +146,6 @@ input {
     border-bottom: 1px solid #d0d0d0;
     padding-bottom: 10px;
     margin-bottom: 10px;
-}
-
-footer {
-    background-color: #4A51A3;
-    color: white;
-    padding: 30px 90px;
-    margin-top: 50px;
-}
-
-.footerContent {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footerLogo img {
-    width: 100px;
-}
-
-.footerNavigation, .footerSocial {
-    list-style-type: none;
-}
-
-.footerNavigation ul, .footerSocial ul {
-    padding: 0;
-}
-
-.footerNavigation li, .footerSocial li {
-    margin-bottom: 5px;
-}
-
-.footerBottom {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
 }
 
 .orderSummaryContainer .card {

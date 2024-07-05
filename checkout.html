@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <title>Checkout</title>
+</head>
+
+<body>
+    <div class="checkOutTop">
+        <div class="topImgContainer">
+            <img src="images/Asset 4@4x.png" alt="Tide" class="Topimg clickable">
+        </div>
+    </div>
+    <div class="container">
+        <div class="fewSteps">
+            <div>
+                <p class="fewStepsMain">Few steps away....</p>
+                <p class="fewStepsSecondary">Fill out the following details to make the contribution</p>
+            </div>
+            <div class="backButton clickable">
+                <img src="back-arrow.svg" alt="">
+                <p>Back to cart</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftColumn">
+                <div class="paymentInfoContainer">
+                    <p class="sectionTitle">Payment Information</p>
+                    <form class="paymentDetailsForm"></form>
+                    <div class="card">
+                        <p class="cardTitle">Payment Details</p>
+                        <p class="requiredInfo"><span class="redStar">*</span>Indicates required information</p>
+
+                        <div class="formField">
+                            <label for="cardNumber">Card Number<span class="redStar">*</span></label>
+                            <input type="text" id="cardNumber" required>
+                        </div>
+                        <div class="formField">
+                            <label for="cardholderName">Cardholder Name<span class="redStar">*</span></label>
+                            <input type="text" id="cardholderName" required>
+                        </div>
+                        <div class="expireCCV">
+                            <div class="formField">
+                                <label for="expiryDate">Expiry Date<span class="redStar">*</span></label>
+                                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="formField">
+                                <label for="ccv">CCV<span class="redStar">*</span></label>
+                                <input type="text" id="ccv" placeholder="XXX" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttonGroup">
+                        <input type="reset" class="clearButton" value="Clear">
+                        <input type="submit" class="saveButton" value="Save">
+                    </div>
+                    </form>
+                </div>
+                <div class="billingAddressContainer">
+                    <p class="sectionTitle">Billing Address</p>
+                    <div class="card">
+                        <form class="billingAddressForm">
+                            <div class="formField">
+                                <label for="address1">Address line 1<span class="redStar">*</span></label>
+                                <input type="text" id="address1" required>
+                            </div>
+                            <div class="formField">
+                                <label for="address2">Address line 2</label>
+                                <input type="text" id="address2">
+                            </div>
+                            <div class="formField">
+                                <label for="address3">Address line 3</label>
+                                <input type="text" id="address3">
+                            </div>
+                            <div class="formField">
+                                <label for="city">Town/City<span class="redStar">*</span></label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="formField">
+                                <label for="state">State/County<span class="redStar">*</span></label>
+                                <input type="text" id="state" required>
+                            </div>
+                            <div class="formField">
+                                <label for="postcode">Postal code/Zip Code<span class="redStar">*</span></label>
+                                <input type="text" id="postcode" required>
+                            </div>
+                            <div class="formField">
+                                <label for="country">Country<span class="redStar">*</span></label>
+                                <input type="text" id="country" required>
+                            </div>
+                            <div class="buttonGroup">
+                                <button type="button" class="clearButton">Clear</button>
+                                <button type="submit" class="saveButton">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="contactDetailsContainer">
+                    <p class="sectionTitle">Contact Details</p>
+                    <div class="card">
+                        <form class="contactDetailsForm">
+                            <div class="formField">
+                                <label for="firstName">First Name<span class="redStar">*</span></label>
+                                <input type="text" id="firstName" required>
+                            </div>
+                            <div class="formField">
+                                <label for="surname">Surname<span class="redStar">*</span></label>
+                                <input type="text" id="surname" required>
+                            </div>
+                            <div class="formField">
+                                <label for="phone">Phone number<span class="redStar">*</span></label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="formField">
+                                <label for="email">Email Address<span class="redStar">*</span></label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="buttonGroup">
+                                <button type="button" class="clearButton">Clear</button>
+                                <button type="submit" class="saveButton">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="rightColumn">
+                <div class="orderSummaryContainer">
+                    <div class="card">
+                        <h2>Order Summary</h2>
+                        <p><strong>Reference:</strong> <span id="orderReference"></span></p>
+                        <div class="orderItems">
+                            <h3>Order Items:</h3>
+                            <!-- Order items will be dynamically inserted here -->
+                        </div>
+                        <p class="totalAmount"><strong>Total</strong> <span id="orderTotal"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div>
+            <img src="images/Asset 4@4x.png" alt="" class="footerImg">
+        </div>
+        <div class="footerNavigation">
+            <div>
+                <h3>NAVIGATION</h3>
+            </div>
+            <div>
+                <a href="home.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="shop.html">Shop</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="sitemap.html">Sitemap</a>
+                <a href="team.html">Team</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+        <div class="footerSocial">
+            <div>
+                <h3>SOCIAL</h3>
+            </div>
+            <div>
+                <a href="">
+                    <img src="images/fb.png" alt="">
+                    Facebook</a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="images/linkedin.png" alt="">
+                    LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const orderItemsContainer = document.querySelector('.orderItems');
+            const orderReference = document.getElementById('orderReference');
+            const orderTotal = document.getElementById('orderTotal');
+        
+            // Set a random order reference
+            orderReference.textContent = '#' + Math.floor(Math.random() * 100000000);
+        
+            // Clear existing content
+            orderItemsContainer.innerHTML = '<h3>Order Items:</h3>';
+        
+            let total = 0;
+        
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('orderItem');
+                itemElement.innerHTML = `
+                    <p><strong>Item Name:</strong> ${item.name}</p>
+                    <p><strong>Price:</strong> $${item.price}</p>
+                    <p><strong>Quantity:</strong> ${item.quantity}</p>
+                `;
+                orderItemsContainer.appendChild(itemElement);
+        
+                total += item.price * item.quantity;
+            });
+        
+            orderTotal.textContent = '$' + total.toFixed(2);
+        
+            // Clear localStorage after displaying the order summary
+            localStorage.removeItem('cartItems');
+        });
+    </script>
+</body>
+
+</html>

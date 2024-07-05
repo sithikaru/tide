@@ -333,6 +333,7 @@ body {
     font-family:"Baloo 2", sans-serif;
     font-weight: 500;
     font-size: 16px;
+    border-radius: 20px;
 }
 
 .popup {
@@ -347,4 +348,32 @@ body {
     display: none;
     font-family: "Baloo 2", sans-serif;
     font-weight: 600;
+}
+
+.searchSuggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 1000;
+}
+
+.searchSuggestion {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.searchSuggestion:hover {
+    background-color: #f0f0f0;
+}
+
+.topSearchContainer div {
+    position: relative;
 }

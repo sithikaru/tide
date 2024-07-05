@@ -1,0 +1,232 @@
+body {
+    font-family: "Baloo 2", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.checkOutTop {
+    padding: 30px 50px;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.Topimg {
+    width: 50px;
+}
+
+.container {
+    padding: 0 90px;
+}
+
+.fewSteps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.fewStepsMain {
+    font-weight: 700;
+    color: #4A51A3;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.fewStepsSecondary {
+    color: #A7A7A7;
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.backButton img {
+    margin-right: 5px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.leftColumn {
+    width: 50%;
+}
+
+.rightColumn {
+    width: 30%;
+}
+
+.sectionTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: #ECECEC;
+    padding: 30px;
+    padding-right: 50px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.cardTitle {
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.requiredInfo {
+    font-size: 14px;
+    color: #8B8B8B;
+    margin-top: -20px;
+}
+
+.redStar {
+    color: red;
+}
+
+.formField {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+}
+
+.expireCCV {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.expireCCV .formField {
+    width: 100px;
+    align-items: center;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.clearButton, .saveButton {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ECECEC;
+    width: 220px;
+    height: 42px;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.orderItem {
+    border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #4A51A3;
+    color: white;
+    padding: 30px 90px;
+    margin-top: 50px;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerLogo img {
+    width: 100px;
+}
+
+.footerNavigation, .footerSocial {
+    list-style-type: none;
+}
+
+.footerNavigation ul, .footerSocial ul {
+    padding: 0;
+}
+
+.footerNavigation li, .footerSocial li {
+    margin-bottom: 5px;
+}
+
+.footerBottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.orderSummaryContainer .card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.orderSummaryContainer h2 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.orderItems {
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.orderItems h3 {
+    margin-top: 0;
+    background-color: #d9d9f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.orderItem {
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.orderItem:last-child {
+    border-bottom: none;
+}
+
+.orderItem p {
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.totalAmount {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-top: 20px;
+}

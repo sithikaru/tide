@@ -27,7 +27,7 @@
             <div class="topSearchContainer">
                 <div>
                     <input type="text" name="Shopsearch" id="Shopsearch" class="Shopsearch" placeholder="Search Items">
-                    <img src="images/material-symbols_search.png" alt="" class="clickable searchIcon">
+<img src="images/material-symbols_search.png" alt="" class="clickable searchIcon" id="searchButton">
                 </div>
             </div>
             <div class="cartContainer ">
@@ -74,12 +74,12 @@
                 </div>
                 <div>
                     <a href="home.html">Home</a>
-                    <a href="">Gallery</a>
+                    <a href="gallery.html">Gallery</a>
                     <a href="shop.html">Shop</a>
-                    <a href="">Feedback</a>
-                    <a href="">Sitemap</a>
-                    <a href="">Team</a>
-                    <a href="">Blog</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="sitemap.html">Sitemap</a>
+                    <a href="team.html">Team</a>
+                    <a href="blog.html">Blog</a>
                 </div>
             </div>
             <div class="footerSocial">
@@ -113,7 +113,7 @@
         <div class="cartSummary">
             <p class="subTotal">Sub Total: <span id="subTotal">$0</span></p>
             <p class="cartSummeryDesc">Shipping and taxes calculated at checkout.</p>
-            <button id="checkoutButton" class="checkoutButton">Checkout</button>
+            <button id="checkoutButton" class="checkoutButton" onclick="goToCheckout()">Checkout</button>
         </div>
 
     </div>
@@ -270,6 +270,44 @@
                 popup.style.display = 'none';
             }, 3000);
         }
+
+        function goToCheckout() {
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            window.location.href = 'checkout.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('Shopsearch');
+            const searchButton = document.getElementById('searchButton');
+            const charityItems = document.querySelector('.charity-items');
+            const merchandiseItems = document.querySelector('.merchandise-items');
+        
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+                
+                function filterItems(container) {
+                    const items = container.querySelectorAll('.item');
+                    items.forEach(item => {
+                        const itemName = item.querySelector('.cardName').textContent.toLowerCase();
+                        if (itemName.includes(searchTerm)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                }
+        
+                filterItems(charityItems);
+                filterItems(merchandiseItems);
+            }
+        
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
     </script>
 </body>
 

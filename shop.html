@@ -27,11 +27,11 @@
             <div class="topSearchContainer">
                 <div>
                     <input type="text" name="Shopsearch" id="Shopsearch" class="Shopsearch" placeholder="Search Items">
-<img src="images/material-symbols_search.png" alt="" class="clickable searchIcon" id="searchButton">
+                    <img src="images/material-symbols_search.png" alt="" class="clickable searchIcon" id="searchButton">
                 </div>
             </div>
-            <div class="cartContainer ">
-                <img src="images/cartDot.png" alt="" class="clickable">
+            <div class="cartContainer">
+                <img id="cartIcon" src="images/cart.png" alt="Cart">
             </div>
         </div>
         <div class="shop">
@@ -109,7 +109,7 @@
 
             </div>
         </div>
-        
+
         <div class="cartSummary">
             <p class="subTotal">Sub Total: <span id="subTotal">$0</span></p>
             <p class="cartSummeryDesc">Shipping and taxes calculated at checkout.</p>
@@ -236,6 +236,7 @@
             });
 
             subTotal.textContent = `$${total.toFixed(2)}`;
+            updateCartIcon();
         }
 
         function addToCart(name, price, image) {
@@ -276,15 +277,15 @@
             window.location.href = 'checkout.html';
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const searchInput = document.getElementById('Shopsearch');
             const searchButton = document.getElementById('searchButton');
             const charityItems = document.querySelector('.charity-items');
             const merchandiseItems = document.querySelector('.merchandise-items');
-        
+
             function performSearch() {
                 const searchTerm = searchInput.value.toLowerCase();
-                
+
                 function filterItems(container) {
                     const items = container.querySelectorAll('.item');
                     items.forEach(item => {
@@ -296,18 +297,27 @@
                         }
                     });
                 }
-        
+
                 filterItems(charityItems);
                 filterItems(merchandiseItems);
             }
-        
+
             searchButton.addEventListener('click', performSearch);
-            searchInput.addEventListener('keyup', function(event) {
+            searchInput.addEventListener('keyup', function (event) {
                 if (event.key === 'Enter') {
                     performSearch();
                 }
             });
         });
+
+        function updateCartIcon() {
+            const cartIcon = document.getElementById('cartIcon');
+            if (cart.length === 0) {
+                cartIcon.src = 'images/cart.png';
+            } else {
+                cartIcon.src = 'images/cartDot.png';
+            }
+        }
     </script>
 </body>
 

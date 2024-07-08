@@ -15,9 +15,9 @@
 
 <body>
     <div class="checkOutTop">
-        <div class="topImgContainer">
+        <a href="index.html" class="topImgContainer">
             <img src="images/Asset 4@4x.png" alt="Tide" class="Topimg clickable">
-        </div>
+        </a>
     </div>
     <div class="container">
         <div class="fewSteps">
@@ -34,7 +34,7 @@
             <div class="leftColumn">
                 <div class="paymentInfoContainer">
                     <p class="sectionTitle">Payment Information</p>
-                    <form class="paymentDetailsForm"></form>
+                    <form class="paymentDetailsForm">
                     <div class="card">
                         <p class="cardTitle">Payment Details</p>
                         <p class="requiredInfo"><span class="redStar">*</span>Indicates required information</p>
@@ -67,7 +67,7 @@
                 </div>
                 <div class="billingAddressContainer">
                     <p class="sectionTitle">Billing Address</p>
-                    <form class="billingAddressForm"></form>
+                    <form class="billingAddressForm">
                     <div class="card"> 
                             <div class="formField">
                                 <label for="address1">Address line 1<span class="redStar">*</span></label>
@@ -106,8 +106,9 @@
                 </div>
                 <div class="contactDetailsContainer">
                     <p class="sectionTitle">Contact Details</p>
+                    <form class="contactDetailsForm">
                     <div class="card">
-                        <form class="contactDetailsForm">
+                        
                             <div class="formField">
                                 <label for="firstName">First Name<span class="redStar">*</span></label>
                                 <input type="text" id="firstName" required>
@@ -124,12 +125,12 @@
                                 <label for="email">Email Address<span class="redStar">*</span></label>
                                 <input type="email" id="email" required>
                             </div>
-                            <div class="buttonGroup">
-                                <button type="button" class="clearButton">Clear</button>
-                                <button type="submit" class="saveButton">Save</button>
-                            </div>
-                        </form>
                     </div>
+                    <div class="buttonGroup">
+                        <button type="button" class="clearButton">Clear</button>
+                        <button type="submit" class="saveButton">Save</button>
+                    </div>
+                </form>
                 </div>
             </div>
             <div class="rightColumn">

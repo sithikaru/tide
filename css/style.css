@@ -31,6 +31,8 @@
         background-position: 0;
     }
 }
+
+
 .block {
     animation: appear linear;
     animation-timeline: view();
@@ -142,6 +144,7 @@ nav {
     padding-top: 50px;
     justify-content: space-around;
     position: relative;
+    margin-top: 30px;
 }
 
 .footerImg {

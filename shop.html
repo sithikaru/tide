@@ -17,6 +17,24 @@
 </head>
 
 <body>
+    <nav>
+        <div class="navLogo">
+            <img src="images/Asset 7@4x.png" alt="">
+        </div>
+        <div class="navContent">
+            <ul>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="profileContainer">
+            <img src="images/profile.svg" alt="">
+        </div>
+    </nav>
     <div id="popup" class="popup">Item added to the cart</div>
     <div class="shopBody">
         <div id="overlay" class="overlay"></div>
@@ -305,6 +323,9 @@
             searchButton.addEventListener('click', performSearch);
             searchInput.addEventListener('keyup', function (event) {
                 if (event.key === 'Enter') {
+                    performSearch();
+                }
+                if (this.value === '') {
                     performSearch();
                 }
             });

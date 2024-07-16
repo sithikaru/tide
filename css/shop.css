@@ -3,6 +3,11 @@ body {
     margin: 0;
 }
 
+nav{
+    background: #4A51A3;
+    padding-bottom: 20px;
+}
+
 .shopTop {
     padding: 30px 50px;
     display: flex;

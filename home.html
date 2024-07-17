@@ -36,7 +36,7 @@
                 </ul>
             </div>
             <div class="profileContainer">
-                <img src="images/profile.svg" alt="">
+                <a href="profile.html"><img src="images/profile.svg" alt=""></a>
             </div>
         </nav>
         <img src="images/Asset 7@4x.png" alt="" class="headerText">
@@ -102,6 +102,17 @@
         <div class="shop">
             <div class="center">
                 <div class="stack-area">
+                    <div class="left">
+                        <div class="title">Shop</div>
+                        <div class="sub-title">
+                            Support our cause while treating yourself to exclusive items! Browse our collection of charity tokens, each representing a specific contribution to our mission. From virtual badges to limited-edition collectibles, these tokens are a meaningful way to showcase your support.
+                          <br />
+                          <div class="seeMore">
+                            <h3>See more</h3>
+                            <img src="images/clarity_arrow-line.png" alt="" class="seeMoreImg">
+                        </div>
+                        </div>
+                      </div>
                     <div class="right">
                         <div class="tickets">
                             <div class="ticket">
@@ -193,6 +204,21 @@
                 rotateTickets();
             }
         });
+        function adjust() {
+            let windowWidth = window.innerWidth;
+            let left = document.querySelector(".left");
+            left.remove();
+            if (windowWidth < 800) {
+              stackArea.insertAdjacentElement("beforebegin", left);
+            } else {
+              stackArea.insertAdjacentElement("afterbegin", left);
+            }
+          }
+          adjust();
+    
+          //detect Resize
+    
+          window.addEventListener("resize", adjust);
     </script>
 </body>
 

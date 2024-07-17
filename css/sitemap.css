@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(74, 81, 163);
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 100px;
+}
+.sitemap {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    margin-bottom:100px;
+    
+}
+
+rect.button {
+    fill: #e6b2d2;
+    transition: fill 0.3s;
+}
+
+rect.button:hover {
+    fill: #999999;
+    
+}
+
+line {
+    stroke: #000000;
+    stroke-width: 2px;
+}
+
+.sitemap svg .background {
+    rx: 20;
+    ry: 20;
+}

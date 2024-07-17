@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Setup</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navLogo">
+            <img src="images/Asset 7@4x.png" alt="">
+        </div>
+        <div class="navContent">
+            <ul>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="profileContainer">
+            <a href="profile.html"><img src="images/profile.svg" alt=""></a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>User Profile Setup</h1>
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <div id="feedback"></div>
+        <div id="profile-output">
+            <!-- User profile will be displayed here -->
+        </div>
+        <div class="button-container">
+            <button id="prev-btn" class="hidden">Previous</button>
+            <button id="next-btn">Next</button>
+            <button id="skip-btn" class="hidden">Skip</button>
+            <button id="submit-btn" class="hidden">Submit</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const prompts = [
+                { question: "What is your full name?", key: "full_name", validate: value => value.trim() !== '' },
+                { question: "What is your age?", key: "age", validate: value => /^\d+$/.test(value) && Number(value) > 0 },
+                { question: "What is your email address?", key: "email", validate: value => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) },
+                { question: "Choose a username for the site:", key: "user_name", validate: value => value.trim() !== '' },
+                { question: "Create a password:", key: "password", validate: value => value.trim() !== '' },
+                { question: "Confirm your password:", key: "confirmation", validate: (value, allValues) => value === allValues.password },
+                { question: "What is your level of expertise in marine biology? (Beginner/Intermediate/Expert)", key: "expertise_level", validate: value => ['beginner', 'intermediate', 'expert'].includes(value.toLowerCase()) },
+                { question: "What aspect of underwater life interests you most? (e.g., coral reefs, deep sea creatures, marine mammals)", key: "main_interest", validate: value => value.trim() !== '' },
+                { question: "Have you ever been scuba diving or snorkeling? (Yes/No)", key: "diving_experience", validate: value => ['yes', 'no'].includes(value.toLowerCase()) },
+                { question: "What ocean or sea are you most interested in exploring?", key: "preferred_ocean", validate: value => value.trim() !== '' },
+                { question: "Are you involved in any marine conservation efforts? If yes, please specify:", key: "conservation_efforts", validate: value => value.trim() !== '' },
+                { question: "How did you hear about our website?", key: "referral_source", validate: value => value.trim() !== '' }
+            ];
+
+            let currentPromptIndex = -1;
+            const totalPrompts = prompts.length;
+            let answeredQuestions = 0;
+
+            const progressBar = document.getElementById('progress-bar');
+            const feedback = document.getElementById('feedback');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const skipBtn = document.getElementById('skip-btn');
+            const submitBtn = document.getElementById('submit-btn');
+            const profileOutput = document.getElementById('profile-output');
+
+            const userProfile = {};
+
+            function updateProgress() {
+                const progress = Math.min((answeredQuestions / totalPrompts) * 100, 100);
+                progressBar.style.width = `${progress}%`;
+                feedback.textContent = `Progress: ${Math.round(progress)}%`;
+            }
+
+            function displayPrompt() {
+                if (currentPromptIndex < totalPrompts) {
+                    const answer = prompt(prompts[currentPromptIndex].question);
+                    if (answer !== null) {
+                        if (prompts[currentPromptIndex].validate && !prompts[currentPromptIndex].validate(answer, userProfile)) {
+                            alert("Invalid input. Please try again.");
+                            displayPrompt(); // Repeat the current prompt
+                        } else {
+                            userProfile[prompts[currentPromptIndex].key] = answer.trim() !== '' ? answer.trim() : "Skipped";
+                            if (answer.trim() !== '') {
+                                answeredQuestions++;
+                            }
+                            updateProfileOutput();
+                            currentPromptIndex++;
+                            updateProgress();
+                            handleButtonVisibility();
+                            if (currentPromptIndex === totalPrompts) {
+                                finishProfileSetup();
+                            }
+                        }
+                    }
+                }
+            }
+
+            function updateProfileOutput() {
+                profileOutput.innerHTML = '';
+                Object.keys(userProfile).forEach(key => {
+                    const p = document.createElement('p');
+                    let displayValue = userProfile[key];
+                    
+                    if (key === 'password' || key === 'confirmation') {
+                        displayValue = '*'.repeat(userProfile[key].length);
+                    }
+                    
+                    const displayKey = key.split('_')
+                        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                        .join(' ');
+                    
+                    p.innerHTML = `<strong>${displayKey}:</strong> ${displayValue}`;
+                    
+                    if (userProfile[key] === "Skipped") {
+                        p.classList.add('skipped-question');
+                    }
+                    
+                    profileOutput.appendChild(p);
+                });
+            
+                if (Object.values(userProfile).includes("Skipped")) {
+                    const skipNote = document.createElement('p');
+                    skipNote.className = 'skip-note';
+                    skipNote.textContent = "Note: Questions marked as 'Skipped' can be answered later.";
+                    profileOutput.appendChild(skipNote);
+                }
+            }
+
+            function finishProfileSetup() {
+                prevBtn.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+                skipBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+                feedback.textContent = "Profile setup complete!";
+                progressBar.style.width = '100%'; // Ensure progress bar is 100%
+            }
+
+            function handlePrevious() {
+                if (currentPromptIndex > 0) {
+                    currentPromptIndex--;
+                    if (userProfile[prompts[currentPromptIndex].key] !== "Skipped") {
+                        answeredQuestions--;
+                    }
+                    updateProgress();
+                    const previousAnswer = prompt(`Previous question: ${prompts[currentPromptIndex].question}\nCurrent answer: ${userProfile[prompts[currentPromptIndex].key]}`);
+                    if (previousAnswer !== null) {
+                        if (prompts[currentPromptIndex].validate && !prompts[currentPromptIndex].validate(previousAnswer, userProfile)) {
+                            alert("Invalid input. Please try again.");
+                            handlePrevious(); // Repeat the current prompt
+                        } else {
+                            userProfile[prompts[currentPromptIndex].key] = previousAnswer.trim() !== '' ? previousAnswer.trim() : "Skipped";
+                            if (previousAnswer.trim() !== '') {
+                                answeredQuestions++;
+                            }
+                            updateProfileOutput();
+                        }
+                    }
+                    handleButtonVisibility();
+                }
+            }
+
+            function handleButtonVisibility() {
+                if (currentPromptIndex <= 0) {
+                    prevBtn.classList.add('hidden');
+                } else {
+                    prevBtn.classList.remove('hidden');
+                }
+
+                if (currentPromptIndex === totalPrompts - 1) {
+                    nextBtn.classList.add('hidden');
+                    skipBtn.classList.add('hidden');
+                    submitBtn.classList.remove('hidden');
+                } else {
+                    nextBtn.classList.remove('hidden');
+                    skipBtn.classList.remove('hidden');
+                    submitBtn.classList.add('hidden');
+                }
+            }
+
+            function displayUserProfile() {
+                const container = document.querySelector('.container');
+                container.innerHTML = `
+                <h2>User Profile</h2>
+                <div id="user-profile">
+                    ${Object.entries(userProfile)
+                        .map(([key, value]) => `
+                            <p><strong>${key.charAt(0).toUpperCase() + key.slice(1).replace('_', ' ')}:</strong> ${value}</p>
+                        `).join('')}
+                </div>
+            `;
+            }
+
+            prevBtn.addEventListener('click', handlePrevious);
+            nextBtn.addEventListener('click', () => {
+                if (currentPromptIndex === -1) {
+                    // First time clicking "Next"
+                    currentPromptIndex = 0;
+                    skipBtn.classList.remove('hidden');
+                }
+                displayPrompt();
+            });
+            skipBtn.addEventListener('click', () => {
+                userProfile[prompts[currentPromptIndex].key] = "Skipped";
+                updateProfileOutput();
+                currentPromptIndex++;
+                handleButtonVisibility();
+                // Do not call displayPrompt() here
+                if (currentPromptIndex === totalPrompts) {
+                    finishProfileSetup();
+                }
+            });
+
+            submitBtn.addEventListener('click', () => {
+                progressBar.style.width = '100%';
+                feedback.textContent = 'Progress: 100%';
+                console.log('User Profile:', userProfile);
+                localStorage.setItem('userProfile', JSON.stringify(userProfile));
+
+                if (Object.keys(userProfile).length === totalPrompts) {
+                    window.location.href = 'submit.html';
+                } else {
+                    alert('Please complete your profile setup.');
+                }
+            });
+
+            updateProgress(); // Initial progress setup
+            handleButtonVisibility();
+        });
+    </script>
+</body>
+
+</html>

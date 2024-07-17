@@ -91,3 +91,10 @@ body {
     max-width: 20%;
     text-align: center;
 }
+
+.team{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+}

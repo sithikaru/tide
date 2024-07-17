@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,94 +17,153 @@
     <link rel="stylesheet" href="css/gallery.css">
     <title>Gallery</title>
 </head>
+
 <body>
-  <nav>
-    <div class="navLogo">
-        <a href="/home.html"><img src="images/Asset 7@4x.png" alt=""></a>
-    </div>
-    <div class="navContent">
-        <ul>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="sitemap.html">Sitemap</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="blog.html">Blog</a></li>
-        </ul>
-    </div>
-    <div class="profileContainer">
-        <img src="images/profile.svg" alt="">
-    </div>
-</nav>
+    <nav>
+        <div class="navLogo">
+            <a href="/home.html"><img src="images/Asset 7@4x.png" alt=""></a>
+        </div>
+        <div class="navContent">
+            <ul>
+                <li>
+                    <div class="mode-toggle">
+                        <button id="mode-switch">Dark/Light</button>
+                    </div>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="blog.html">Blog</a></li>
+
+            </ul>
+        </div>
+        <div class="profileContainer">
+            <img src="images/profile.svg" alt="">
+        </div>
+    </nav>
     <div class="galleryTop">
         <h1>Gallery</h1>
-    </div>
-    <div class="gallery">
-        <div class="gallery-item">
-          <img class="four-grid-cells" src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg" alt="Northern Winter Sky Image" />
-          <div class="overlay">
-              <div class="text">
-                  <h3>Northern Winter Sky</h3>
-                  <p>A beautiful winter sky with stars shining brightly.</p>
-              </div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg" alt="Shining Stars Image" />
-          <div class="overlay">
-              <div class="text">
-                  <h3>Shining Stars</h3>
-                  <p>Stars shining in the night sky.</p>
-              </div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img class="wide-image" src="https://images.pexels.com/photos/3933881/pexels-photo-3933881.jpeg" alt="A River Flowing Image" />
-          <div class="overlay">
-              <div class="text">
-                  <h3>A River Flowing</h3>
-                  <p>A serene river flowing through the landscape.</p>
-              </div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/5409751/pexels-photo-5409751.jpeg" alt="A cloudy Mountain Image" />
-          <div class="overlay">
-              <div class="text">
-                  <h3>A Cloudy Mountain</h3>
-                  <p>A mountain covered with clouds.</p>
-              </div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/4101555/pexels-photo-4101555.jpeg" alt="A Winter Rainbow Image" />
-          <div class="overlay">
-              <div class="text">
-                  <h3>A Winter Rainbow</h3>
-                  <p>A rainbow during winter.</p>
-              </div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img class="wide-image" src="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg" alt="A Clean Mountain Lake" />
-          <div class="overlay">
-              <div class="text">
-                  <h3>A Clean Mountain Lake</h3>
-                  <p>A crystal clear lake in the mountains.</p>
-              </div>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg" alt="Shining Stars Image" />
-          <div class="overlay">
-              <div class="text">
-                  <h3>Shining Stars</h3>
-                  <p>Stars shining in the night sky.</p>
-              </div>
-          </div>
+
+        <div class="font-size-control">
+            <label for="font-size-slider">Font Size:</label>
+            <input type="range" id="font-size-slider" min="12" max="24" value="16">
+            <span id="font-size-value">16px</span>
         </div>
     </div>
 
-    
+    <div class="gallery">
+        <div class="gallery-item">
+            <img class="four-grid-cells" src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg"
+                alt="Northern Winter Sky Image" />
+            <div class="overlay">
+                <div class="text">
+                    <h3>Northern Winter Sky</h3>
+                    <p>A beautiful winter sky with stars shining brightly.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg" alt="Shining Stars Image" />
+            <div class="overlay">
+                <div class="text">
+                    <h3>Shining Stars</h3>
+                    <p>Stars shining in the night sky.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img class="wide-image" src="https://images.pexels.com/photos/3933881/pexels-photo-3933881.jpeg"
+                alt="A River Flowing Image" />
+            <div class="overlay">
+                <div class="text">
+                    <h3>A River Flowing</h3>
+                    <p>A serene river flowing through the landscape.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/5409751/pexels-photo-5409751.jpeg"
+                alt="A cloudy Mountain Image" />
+            <div class="overlay">
+                <div class="text">
+                    <h3>A Cloudy Mountain</h3>
+                    <p>A mountain covered with clouds.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/4101555/pexels-photo-4101555.jpeg"
+                alt="A Winter Rainbow Image" />
+            <div class="overlay">
+                <div class="text">
+                    <h3>A Winter Rainbow</h3>
+                    <p>A rainbow during winter.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img class="wide-image" src="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg"
+                alt="A Clean Mountain Lake" />
+            <div class="overlay">
+                <div class="text">
+                    <h3>A Clean Mountain Lake</h3>
+                    <p>A crystal clear lake in the mountains.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg" alt="Shining Stars Image" />
+            <div class="overlay">
+                <div class="text">
+                    <h3>Shining Stars</h3>
+                    <p>Stars shining in the night sky.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modeSwitch = document.getElementById('mode-switch');
+        const body = document.body;
+
+        modeSwitch.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+
+            // Save the current mode preference to localStorage
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('mode', 'dark');
+            } else {
+                localStorage.setItem('mode', 'light');
+            }
+        });
+
+        // Check for saved mode preference on page load
+        const savedMode = localStorage.getItem('mode');
+        if (savedMode === 'dark') {
+            body.classList.add('dark-mode');
+        }
+
+        // Font size slider functionality
+        const fontSizeSlider = document.getElementById('font-size-slider');
+        const fontSizeValue = document.getElementById('font-size-value');
+
+        fontSizeSlider.addEventListener('input', () => {
+            const fontSize = fontSizeSlider.value;
+            fontSizeValue.textContent = `${fontSize}px`;
+            document.documentElement.style.fontSize = `${fontSize}px`;
+            localStorage.setItem('fontSize', fontSize);
+        });
+
+        // Check for saved font size preference on page load
+        const savedFontSize = localStorage.getItem('fontSize');
+        if (savedFontSize) {
+            fontSizeSlider.value = savedFontSize;
+            fontSizeValue.textContent = `${savedFontSize}px`;
+            document.documentElement.style.fontSize = `${savedFontSize}px`;
+        }
+    </script>
 </body>
+
 </html>

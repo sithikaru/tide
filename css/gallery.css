@@ -7,7 +7,7 @@ body {
 
 .galleryTop {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -169,4 +169,61 @@ img.wide-image {
 }
 @media only screen and (max-width: 480px){
     .our-team .social{ left: -20px; }
+}
+
+/* Mode toggle button */
+.mode-toggle {
+    margin-left: 20px;
+}
+
+#mode-switch {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #3b336a;
+    color: #fff;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode nav {
+    background-color: #333333;
+}
+
+body.dark-mode .navContent ul li a {
+    color: #ffffff;
+}
+
+body.dark-mode .gallery-item .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .gallery-item .text h3,
+body.dark-mode .gallery-item .text p {
+    color: #ffffff;
+}
+
+/* Font size control styles */
+.font-size-control {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.font-size-control label {
+    margin-right: 10px;
+}
+
+#font-size-slider {
+    width: 100px;
+}
+
+#font-size-value {
+    margin-left: 10px;
+    min-width: 40px;
 }

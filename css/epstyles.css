@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('background-image.jpg');
+    background-color: #f4f4f4;
+    color: #333;
+}
+nav{
+    background: #4A51A3;
+}
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile h2 {
+    margin: 10px 0 5px;
+}
+
+.tasks {
+    margin-top: 20px;
+}
+
+.tasks h2 {
+    /* border-bottom: 2px solid #333; */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.task {
+    background-color: #e0e7ff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.task h3 {
+    margin-top: 0;
+}
+
+.task p {
+    margin: 10px 0;
+}
+
+.task a {
+    color: #1e40af;
+    text-decoration: none;
+}

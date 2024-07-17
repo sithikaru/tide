@@ -310,12 +310,16 @@
     font-family: poppins;
     font-weight: 700;
     line-height: 88px;
+    font-family: "Inter", sans-serif;
+    color: #4A51A3;
+    margin-top: 300px;
   }
   .sub-title {
     width: 420px;
     font-family: poppins;
     font-size: 14px;
     margin-top: 30px;
+    font-family: "Inter", sans-serif;
   }
   .sub-title button {
     font-family: poppins;

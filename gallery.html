@@ -1,169 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:wght@100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gallery.css">
     <title>Gallery</title>
 </head>
-
-<body>
+<body class="scheme-default">
     <nav>
         <div class="navLogo">
             <a href="/home.html"><img src="images/Asset7@4x.png" alt=""></a>
         </div>
         <div class="navContent">
             <ul>
-                <li>
-                    <div class="mode-toggle">
-                        <button id="mode-switch">Dark/Light</button>
-                    </div>
-                </li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="sitemap.html">Sitemap</a></li>
                 <li><a href="team.html">Team</a></li>
-                <li><a href="blog.html">Blog</a></li>
-
+                <li><a href="sanuka blog.html">Blog</a></li>
             </ul>
         </div>
         <div class="profileContainer">
             <img src="images/profile.svg" alt="">
         </div>
     </nav>
-    <div class="galleryTop">
-        <h1>Gallery</h1>
-
-        <div class="font-size-control">
-            <label for="font-size-slider">Font Size:</label>
-            <input type="range" id="font-size-slider" min="12" max="24" value="16">
-            <span id="font-size-value">16px</span>
+    <section class="controls">
+        <button onclick="changeColorScheme('default')">Default</button>
+        <button onclick="changeColorScheme('dark')">Dark</button>
+        <button onclick="changeColorScheme('blue')">Blue</button>
+        <button onclick="changeColorScheme('random')">Random</button>
+        
+    </section>
+    <section class="font-controls">
+        <button onclick="changeFontSize('increase')">Increase Font Size</button>
+        <button onclick="changeFontSize('decrease')">Decrease Font Size</button>
+    </section>
+        <div class="galleryTop">
+            <h1>Gallery</h1>
         </div>
+        <div class="gallery">
+            <div class="gallery-item">
+            <img class="four-grid-cells" src="images/ocg-saving-the-ocean-psRG_u3DLps-unsplash 1 (1).png" alt="Beach cleaning image" />
+            <div class="overlay">
+                <div class="text">
+                    <h4>On a bright and sunny Saturday morning ,our community united for an inspiring ocean and beach cleaning program</h4>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/ocg-saving-the-ocean-cyxRGU7keTw-unsplash 1.png" alt="Community beach cleaning image" />
+            <div class="overlay">
+                <div class="text">
+                    <h4>On a bright and sunny Saturday morning, our community came together for an inspiring and impactful Ocean and Beach Clean-Up Program. The event, aimed at restoring the natural beauty of our coastlines and protecting marine life, saw enthusiastic participation from volunteers of all ages.</h4>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img class="wide-image" src="images/ocg-saving-the-ocean-bWAArZ5M4Ag-unsplash 1.png" alt="Volunteers protecting marine life" />
+            <div class="overlay">
+                <div class="text">
+                    <h4>volunteers working together to clean the beach and protect marine life.</h4>
+                    
+                </div>
+            </div>
+            </div>
+        <div class="gallery-item">
+            <img src="images/mateusz-klein-aAKvscHLQuA-unsplash 1.png" alt="A pristine coastal area after a cleanup" />
+            <div class="overlay">
+                <div class="text">
+                    <h4>A pristine coastal area after a cleanup</h4>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/tim-mossholder-qq-8dpdlBsY-unsplash 1.png" alt="marine life thriving in a clean environment" />
+            <div class="overlay">
+                <div class="text1">
+                    <h3>marine life thriving in a clean environment</h3>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/antoine-giret-7_TSzqJms4w-unsplash 1.png" alt="A Clean Mountain Lake" />
+            <div class="overlay">
+                <div class="text1">
+                    <h3>Volunteers collecting plastic waste from a beach</h3>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jas-min-HfgMyrPrLxI-unsplash 1.png" alt="Shining Stars Image" />
+            <div class="overlay">
+                <div class="text1">
+                    <h3>A vibrant collection of plastic waste collected during the cleanup.</h3>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/brian-yurasits-7lzc2Yg-oVM-unsplash 1.png" alt="Shining Stars Image" />
+            <div class="overlay">
+                <div class="text1">
+                    <h3>Discarded bottles and other waste on the beach before the cleanup.</h3>
+                    
+                </div>
+            </div>
+        </div>
+        
     </div>
+    
 
-    <div class="gallery">
-        <div class="gallery-item">
-            <img class="four-grid-cells" src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg"
-                alt="Northern Winter Sky Image" />
-            <div class="overlay">
-                <div class="text">
-                    <h3>Northern Winter Sky</h3>
-                    <p>A beautiful winter sky with stars shining brightly.</p>
+    <div class="footer">
+        <div class="footer">
+            <p><a href="sanuka.html
+                " style="color: white; text-decoration: none;">&copy; I am Sanuka Dabare,This is my webpage</a></p>
+            <div>
+            </div>
+            <div class="footerNavigation">
+                <div>
+                    <h3>NAVIGATION</h3>
+                </div>
+                <div>
+                    <a href="home.html">Home</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="feedback.html">Feedback</a>
+                    <a href="sitemap.html">Sitemap</a>
+                    <a href="team.html">Team</a>
+                    <a href="sanuka blog.html">Blog</a>
                 </div>
             </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg" alt="Shining Stars Image" />
-            <div class="overlay">
-                <div class="text">
-                    <h3>Shining Stars</h3>
-                    <p>Stars shining in the night sky.</p>
+            <div class="footerSocial">
+                <div>
+                    <h3>SOCIAL</h3>
                 </div>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img class="wide-image" src="https://images.pexels.com/photos/3933881/pexels-photo-3933881.jpeg"
-                alt="A River Flowing Image" />
-            <div class="overlay">
-                <div class="text">
-                    <h3>A River Flowing</h3>
-                    <p>A serene river flowing through the landscape.</p>
+                <div>
+                    <a href="">
+                        <img src="images/fb.png" alt="">
+                        Facebook</a>
                 </div>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/5409751/pexels-photo-5409751.jpeg"
-                alt="A cloudy Mountain Image" />
-            <div class="overlay">
-                <div class="text">
-                    <h3>A Cloudy Mountain</h3>
-                    <p>A mountain covered with clouds.</p>
-                </div>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/4101555/pexels-photo-4101555.jpeg"
-                alt="A Winter Rainbow Image" />
-            <div class="overlay">
-                <div class="text">
-                    <h3>A Winter Rainbow</h3>
-                    <p>A rainbow during winter.</p>
-                </div>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img class="wide-image" src="https://images.pexels.com/photos/443446/pexels-photo-443446.jpeg"
-                alt="A Clean Mountain Lake" />
-            <div class="overlay">
-                <div class="text">
-                    <h3>A Clean Mountain Lake</h3>
-                    <p>A crystal clear lake in the mountains.</p>
-                </div>
-            </div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg" alt="Shining Stars Image" />
-            <div class="overlay">
-                <div class="text">
-                    <h3>Shining Stars</h3>
-                    <p>Stars shining in the night sky.</p>
-                </div>
-            </div>
-        </div>
+                <div>
+                    <a href="">
+    
+        
     </div>
-
     <script>
-        const modeSwitch = document.getElementById('mode-switch');
-        const body = document.body;
-
-        modeSwitch.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-
-            // Save the current mode preference to localStorage
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('mode', 'dark');
-            } else {
-                localStorage.setItem('mode', 'light');
-            }
-        });
-
-        // Check for saved mode preference on page load
-        const savedMode = localStorage.getItem('mode');
-        if (savedMode === 'dark') {
-            body.classList.add('dark-mode');
+        function changeColorScheme(scheme) {
+            const body = document.body;
+            body.className = '';
+            body.classList.add(`scheme-${scheme}`);
         }
 
-        // Font size slider functionality
-        const fontSizeSlider = document.getElementById('font-size-slider');
-        const fontSizeValue = document.getElementById('font-size-value');
-
-        fontSizeSlider.addEventListener('input', () => {
-            const fontSize = fontSizeSlider.value;
-            fontSizeValue.textContent = `${fontSize}px`;
-            document.documentElement.style.fontSize = `${fontSize}px`;
-            localStorage.setItem('fontSize', fontSize);
-        });
+        function changeFontSize(action) {
+            const root = document.documentElement;
+            const currentFontSize = parseFloat(getComputedStyle(root).fontSize);
+            const newSize = action === 'increase' ? currentFontSize + 2 : currentFontSize - 2;
+            root.style.fontSize = `${newSize}px`;
+            localStorage.setItem('fontSize', newSize);
+        }
 
         // Check for saved font size preference on page load
         const savedFontSize = localStorage.getItem('fontSize');
         if (savedFontSize) {
-            fontSizeSlider.value = savedFontSize;
-            fontSizeValue.textContent = `${savedFontSize}px`;
             document.documentElement.style.fontSize = `${savedFontSize}px`;
         }
+
+        
     </script>
 </body>
-
 </html>

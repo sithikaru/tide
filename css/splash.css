@@ -44,6 +44,7 @@ body {
     flex-direction: column;
     align-items: center;
     /* border: 1px solid #000; */
+    
 }
 
 .logo1 {
@@ -97,4 +98,6 @@ body {
     flex-direction: row;
     gap: 20px;
     text-align: center;
+    color: #4a51a3;
+    animation: logo1Animation 2s ease backwards;
 }

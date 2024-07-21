@@ -57,6 +57,10 @@ nav{
 }
 
 .task a {
-    color: #1e40af;
+    color: #000000;
     text-decoration: none;
+}
+
+.copyright{
+    padding-top: 600px;
 }

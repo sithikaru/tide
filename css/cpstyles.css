@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: url('images/header-background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+
+
+.welcome h1 {
+    font-size: 50px;
+    margin-left: 10px;
+
+}
+
+main {
+    padding: 20px;
+}
+
+.content {
+    background: white;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1000px;
+    border: #2f2f2f solid 0.5px;
+    margin-bottom: 150px;
+}
+
+.content h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+
+.content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin-bottom: 10px;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%; /* Changed from 2000px to 100% for responsiveness */
+    height: 100vh; /* Changed from 1000px to 100vh for full viewport height */
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/cristian-palmer-XexawgzYOBc-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 50px 20px rgba(0, 0, 0, 0.5); /* Adjust the values for your desired inner shadow */
+    z-index: -1;
+}
+
+.welcome {
+    position: absolute;
+    top: 50%;
+    left: 50px; /* Changed from 50% to a fixed left margin */
+    transform: translateY(-50%); /* Only translate vertically */
+    text-align: left;
+}
+
+.welcome h1 {
+    color: white;
+    font-size: 4rem;
+    text-align: left;
+    margin-left: 0; /* Remove any left margin */
+}
+
+nav{
+    background: #4A51A3;
+    padding: 10px;
+    padding-top: 25px;
+}

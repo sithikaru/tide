@@ -1,63 +1,74 @@
-.blog-grid {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: space-around;
+body{
+    font-family: "Baloo 2", sans-serif;
 }
 
-.blog-post {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.main{
+    padding: 0 250px;
+}
+nav{
+    background: #4A51A3;
+    font-family: "Inter", sans-serif;
 }
 
-.blog-post:hover {
-    transform: translateY(-5px);
+.content-section {
+    margin: 50px 0;
 }
 
-.blog-post img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.blog-post h2 {
-    font-size: 1.5rem;
-    margin: 1rem;
+.section-title {
+    font-size: 48px;
     color: #4A51A3;
+    margin-bottom: 20px;
 }
 
-.post-meta {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0 1rem;
+.section-content {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: justify;
 }
 
-.blog-post p {
-    margin: 1rem;
-    font-size: 1rem;
+.image-gallery {
+    margin: 50px 0;
 }
 
-.read-more {
+.mission-cards {
+    margin: 50px 0;
+}
+
+.call-to-action {
+    text-align: center;
+    margin: 100px 0;
+}
+
+.call-to-action h2 {
+    font-size: 36px;
+    color: #4A51A3;
+    margin-bottom: 30px;
+}
+
+.cta-button {
     display: inline-block;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
+    padding: 15px 30px;
     background-color: #4A51A3;
-    color: #fff;
+    color: white;
     text-decoration: none;
+    font-size: 18px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.read-more:hover {
-    background-color: #3a3f7d;
+.cta-button:hover {
+    background-color: #3a4084;
 }
-@media screen and (min-width: 768px) {
-    .container {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 2rem;
-    }
+
+.fishLine {
+    background-image: url("../images/fishLine.svg");
+    min-height: 100px;
+    background-repeat: repeat-x;
+    animation: marquee 10s infinite linear;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+}
+
+.card img{
+    width: 500px;
 }

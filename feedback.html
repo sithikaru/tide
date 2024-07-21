@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts preconnect and link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <!-- Link to external CSS files -->
+    <link rel="stylesheet" href="CSS/feedbackstyles.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Feedback Form</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="navLogo">
+            <!-- Logo image -->
+            <img src="images/Asset7@4x.png" alt="">
+        </div>
+        <div class="navContent">
+            <ul>
+                <!-- Navigation links -->
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="thisaraBlog.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="profileContainer">
+            <!-- Profile icon -->
+            <img src="images/profile.svg" alt="">
+        </div>
+    </nav>
+
+    <!-- Feedback form container -->
+    <div class="feedback-form-container">
+        <form class="feedback-form" id="feedback-form" action="mailto:thisaraneelawala2@gmail.com" method="post" enctype="text/plain">
+            <h1>Feedback Form</h1>
+            <!-- Name input -->
+            <label for="name">Enter Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter name here" required>
+
+            <!-- Email input -->
+            <label for="email">Enter Your E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Enter e-mail here" required>
+
+            <!-- First-time visit question -->
+            <label>Was this your first time here?</label>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="first-time-yes" name="first-time" value="yes" required>
+                    <label for="first-time-yes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="first-time-no" name="first-time" value="no">
+                    <label for="first-time-no">No</label>
+                </div>
+            </div>
+
+            <!-- Website navigation question -->
+            <label>Was this website informative and easy to navigate through?</label>
+            <div class="radio-group">
+                <div>
+                    <input type="radio" id="easy-nav-yes" name="easy-nav" value="yes" required>
+                    <label for="easy-nav-yes">Yes</label>
+                </div>
+                <div>
+                    <input type="radio" id="easy-nav-no" name="easy-nav" value="no">
+                    <label for="easy-nav-no">No</label>
+                </div>
+            </div>
+
+            <!-- Improvement suggestions -->
+            <label for="improvements">If no, suggest any improvements</label>
+            <textarea id="improvements" name="improvements" placeholder="Add your message"></textarea>
+
+            <!-- Satisfaction rating -->
+            <label>Please rate your satisfaction with our services by selecting one of the options below, where the leftmost option means "Not satisfied at all" and the rightmost option means "Very satisfied."</label>
+            <div class="rating-group">
+                <span class="rating-label">Unsatisfied</span>
+                <div class="ratings">
+                    <input type="radio" id="rating-0" name="rating" value="0" required>
+                    <label for="rating-0"></label>
+                    <input type="radio" id="rating-1" name="rating" value="1">
+                    <label for="rating-1"></label>
+                    <input type="radio" id="rating-2" name="rating" value="2">
+                    <label for="rating-2"></label>
+                    <input type="radio" id="rating-3" name="rating" value="3">
+                    <label for="rating-3"></label>
+                    <input type="radio" id="rating-4" name="rating" value="4">
+                    <label for="rating-4"></label>
+                </div>
+                <span class="rating-label">Very satisfied</span>
+            </div>
+
+            <!-- Additional questions -->
+            <label for="questions">Do you have any additional questions</label>
+            <textarea id="questions" name="questions" placeholder="Add your message"></textarea>
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+            <div id="submitMessage" class="submit-message">Thank you for your feedback!</div>
+        </form>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="js/script.js"></script>
+
+    <!-- Footer section -->
+    <div class="footer">
+        <div>
+            <!-- Footer logo image -->
+            <img src="images/Asset4@4x.png" alt="" class="footerImg">
+        </div>
+        <div class="footerNavigation">
+            <div>
+                <h3>NAVIGATION</h3>
+            </div>
+            <div>
+                <!-- Footer navigation links -->
+                <a href="home.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="shop.html">Shop</a>
+                <a href="feedback.html">Feedback</a>
+                <a href="sitemap.html">Sitemap</a>
+                <a href="team.html">Team</a>
+                <a href="blog.html">Blog</a>
+            </div>
+        </div>
+        <div class="footerSocial">
+            <div>
+                <h3>SOCIAL</h3>
+            </div>
+            <div>
+                <!-- Social media links -->
+                <a href="">
+                    <img src="images/fb.png" alt="">
+                    Facebook
+                </a>
+            </div>
+            <div>
+                <a href="">
+                    <img src="images/linkedin.png" alt="">
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><a href="thisaraBlog.html">Copyright ©2024; Developed by Thisara Neelawala</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
